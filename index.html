@@ -10,10 +10,22 @@
     <script src="script.js"></script>
     <style> .gsignin2{
             text-align: center
-        }</style>
+        }
+        .data{
+            display: none;  
+        }
+    </style>
   </head>
   <body>
     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+      <div class="data">
+          <p>profile details</p>
+          <img id="pic" class="img-circle" width="100" height="100"/>
+          <p>email address</p>
+          <p id="email" class="alert alert-danger"></p>
+          <button onclick="signOut()" class="btn btn-danger">SignOut </button>
+      </div>
+      
     <script>
       function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
