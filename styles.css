@@ -13,6 +13,14 @@
   padding-bottom: 10px;
 }
 
+.gsignin2{
+  text-align: center
+}
+
+.data{
+  display: none;
+}
+
 .landingheader{
   color: #111;
   font-family: 'Helvetica Neue', sans-serif;
