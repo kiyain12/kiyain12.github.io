@@ -1,16 +1,21 @@
-.img {
+.logos {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 20%;
   max-width: 20%;
-  max-height: 20%;
   height: auto;
 }
-
+h1{
+    font-family: 'Helvetica Neue', sans-serif;
+}
+.imag{
+    display: block;
+    margin:0 auto 0 auto;
+}
 .homelogo{
-  padding-top: 100px;
-  padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .gsignin2{
