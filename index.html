@@ -11,9 +11,19 @@
    <div class="homelogo">
       <img src="logo.png" alt="Logo" class="img">
     </div>
+    
+    
   <button onclick="onSignInClicked()">Sign in with button onClick</button>
-  <button id="button2">Sign in with attachClickHandler</button>
+    
+    
+<!--  <button id="button2">Sign in with attachClickHandler</button>-->
+    
+
   <div id="button3">Sign in with render function</div>
+    
+    
+    
+    
   <button id="button4" onclick="isUserSignedIn()">Is user signed in?</button>
   <button onclick="showCurrentUserInfo()">Show current user info</button>
   <button id="signout" onclick="signOut()">Sign out</button>
@@ -31,12 +41,12 @@
         console.log('user is signed in: ', isUserSignedIn());
 
         // Method 2: sign in handler hooked up by the library
-        console.log('click handler')
-        auth2.attachClickHandler(document.getElementById('button2'), {}, function(googleUser) {
-          console.log('click handler callback')
-        window.location.href = "https://kiyain12.github.io/home.html"
-          document.querySelector('#name').innerText = JSON.stringify(googleUser)
-        })
+//        console.log('click handler')
+//        auth2.attachClickHandler(document.getElementById('button2'), {}, function(googleUser) {
+//          console.log('click handler callback')
+//        window.location.href = "https://kiyain12.github.io/home.html"
+//          document.querySelector('#name').innerText = JSON.stringify(googleUser)
+//        })
 
         // listen for changes in user or signIn status
         auth2.isSignedIn.listen(function(isSignedIn) {
@@ -58,8 +68,8 @@
           height: 50,
           onSuccess: function(googleUser) {
             console.log('signin2 success')
-             window.location.href = "https://kiyain12.github.io/home.html"
             document.querySelector('#name').innerText = JSON.stringify(googleUser);
+                    window.location.href = "https://kiyain12.github.io/home.html"
           }
         }
         gapi.signin2.render('button3', opts)
@@ -78,7 +88,13 @@
         console.log('this is an error')
       })
     }
-
+      
+      
+      
+      
+      
+      
+      
     function isUserSignedIn() {
       // user is signed in if you click the button since the lib has been loaded already
       var isSignedIn = auth2.isSignedIn.get();
