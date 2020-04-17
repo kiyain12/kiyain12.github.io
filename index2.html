@@ -6,7 +6,8 @@
   <script src="https://apis.google.com/js/api.js?onload=onLibraryLoaded" async defer></script>
 </head>
 <body>
-  <h1>Log-In to CarShare</h1>
+
+    <h1>Log-In to CarShare</h1>
    <div class="homelogo">
       <img src="logo.png" alt="Logo" class="img">
     </div>
@@ -69,6 +70,7 @@
       // using global variable
       auth2.signIn().then(function(result) {
         console.log('sign in successful')
+          window.location.href = "https://kiyain12.github.io/home.html"
         document.querySelector('#name').innerText = JSON.stringify(result)
       }, function(err) {
         console.log('this is an error')
