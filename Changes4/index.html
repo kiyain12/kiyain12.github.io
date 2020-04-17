@@ -18,12 +18,11 @@
 
     <h1>Log-In to CarShare</h1>
    <div class="homelogo">
-      <img src="logo.png" alt="Logo" class="img">
+      <img src="logo.png" alt="Logo" class="imag">
     </div>
-    
-    
-  <button id="signin" onclick="onSignInClicked()">Sign in with Google</button>
-    
+    <div>
+      <button id="signin" style="margin:auto; display:block;" onclick="onSignInClicked()">Sign in with Google</button>
+    </div>
     
 <!--  <button id="button2">Sign in with attachClickHandler</button>-->
     
@@ -32,9 +31,9 @@
     
     
     
-  <button id="button4" onclick="isUserSignedIn()">Is user signed in?</button>
-  <button onclick="showCurrentUserInfo()">Show current user info</button>
-  <button id="signout" onclick="signOut()">Sign out</button>
+  <button id="button4" style="display:none;" onclick="isUserSignedIn()">Is user signed in?</button>
+  <button style="display:none;" onclick="showCurrentUserInfo()">Show current user info</button>
+  <button style="display:none;" id="signout" onclick="signOut()">Sign out</button>
   <div id="name"></div>
   <script>
     var auth2 = undefined;
