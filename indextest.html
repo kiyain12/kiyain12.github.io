@@ -4,11 +4,7 @@
     <link rel="stylesheet" href="styles.css">
     <meta charset="utf-8">
     <title>CarShare</title>
-    <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="447302165124-6icusalvr0bvcq194tn0bv4epn22kbnr.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://apis.google.com/js/api.js?onload=onLibraryLoaded" async defer></script>
   </head>
 
   <body>
@@ -17,65 +13,130 @@
     </div>
 
     <h1 class="landingheader"> CarShare </h1>
-      
-    <div class="g-signin2" data-onsuccess="onSignIn"
-    data-scope="https://www.googleapis.com/auth/plus.login"></div>
-      <div class="data">
-          <p>profile details</p>
-          <img id="pic" class="img-circle" width="100" height="100"/>
-          <p>email address</p>
-          <p id="email" class="alert alert-danger"></p>
-          <button onclick="signOut()" class="btn btn-danger">SignOut </button>
-      </div>
+    
+    <div id="my-signin2"></div>
+  <script>
+    function onSuccess(googleUser) {
+      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+      window.location.href = "https://kiyain12.github.io/home.html"
+    }
+    function onFailure(error) {
+      console.log(error);
+    }
+    function renderButton() {
+      gapi.signin2.render('my-signin2', {
+        'scope': 'profile email',
+        'width': 240,
+        'height': 50,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+      });
+    }
+  </script>
 
   </body>
 
 </html>
 
+<!-- <head>
+  <title>Google Auth Demo</title>
+  <script src="https://apis.google.com/js/api.js?onload=onLibraryLoaded" async defer></script>
+</head>
+<body>
 
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
- <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="447302165124-6icusalvr0bvcq194tn0bv4epn22kbnr.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="script.js"></script>
-    <style> .gsignin2{
-            text-align: center
-        }
-        .data{
-            display: none;  
-        }
-    </style>
-  </head>
-  <body>
-    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-      <div class="data">
-          <p>profile details</p>
-          <img id="pic" class="img-circle" width="100" height="100"/>
-          <p>email address</p>
-          <p id="email" class="alert alert-danger"></p>
-          <button onclick="signOut()" class="btn btn-danger">SignOut </button>
-      </div> -->
-      
-    <!--<script>
-      //function onSignIn(googleUser) {
-        // Useful data for your client-side scripts:
-        //var profile = googleUser.getBasicProfile();
-        //console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-        //console.log('Full Name: ' + profile.getName());
-        //console.log('Given Name: ' + profile.getGivenName());
-        //console.log('Family Name: ' + profile.getFamilyName());
-        //console.log("Image URL: " + profile.getImageUrl());
-        //console.log("Email: " + profile.getEmail());
+    <h1>Log-In to CarShare</h1>
+   <div class="homelogo">
+      <img src="logo.png" alt="Logo" class="img">
+    </div>
+  <button onclick="onSignInClicked()">Sign in with button onClick</button>
+  <button id="button2">Sign in with attachClickHandler</button>
+  <div id="button3">Sign in with render function</div>
+  <button id="button4" onclick="isUserSignedIn()">Is user signed in?</button>
+  <button onclick="showCurrentUserInfo()">Show current user info</button>
+  <button id="signout" onclick="signOut()">Sign out</button>
+  <div id="name"></div>
+  <script>
+    var auth2 = undefined;
+    function onLibraryLoaded() {
+      gapi.load('auth2', function() {
+        auth2 = gapi.auth2.init({
+          client_id: '447302165124-6icusalvr0bvcq194tn0bv4epn22kbnr.apps.googleusercontent.com',
+          scope: 'profile'
+        })
 
-        // The ID token you need to pass to your backend:
-        //var id_token = googleUser.getAuthResponse().id_token;
-        //console.log("ID Token: " + id_token);
-     // }
-    </script> -->
-<!--   </body>
-</html> -->
+        // when page first loads, user is not signed in
+        console.log('user is signed in: ', isUserSignedIn());
+
+        // Method 2: sign in handler hooked up by the library
+        console.log('click handler')
+        auth2.attachClickHandler(document.getElementById('button2'), {}, function(googleUser) {
+          console.log('click handler callback')
+        window.location.href = "https://kiyain12.github.io/home.html"
+          document.querySelector('#name').innerText = JSON.stringify(googleUser)
+        })
+
+        // listen for changes in user or signIn status
+        auth2.isSignedIn.listen(function(isSignedIn) {
+          console.log('change in sign in status ', isSignedIn)
+          if(isSignedIn) {
+            document.querySelector('#signout').style.display = 'block';
+          } else {
+            document.querySelector('#signout').style.display = 'none';
+          }
+          
+        })
+      })
+
+      gapi.load('signin2', function() {
+        // Method 3: render a sign in button
+        // using this method will show Signed In if the user is already signed in
+        var opts = {
+          width: 200,
+          height: 50,
+          onSuccess: function(googleUser) {
+            console.log('signin2 success')
+             window.location.href = "https://kiyain12.github.io/home.html"
+            document.querySelector('#name').innerText = JSON.stringify(googleUser);
+          }
+        }
+        gapi.signin2.render('button3', opts)
+      })
+    }
+
+
+    // Method 1: sign in handler hooked up yourself
+    function onSignInClicked() {
+      // using global variable
+      auth2.signIn().then(function(result) {
+        console.log('sign in successful')
+        window.location.href = "https://kiyain12.github.io/home.html"
+        document.querySelector('#name').innerText = JSON.stringify(result)
+      }, function(err) {
+        console.log('this is an error')
+      })
+    }
+
+    function isUserSignedIn() {
+      // user is signed in if you click the button since the lib has been loaded already
+      var isSignedIn = auth2.isSignedIn.get();
+      document.querySelector('#name').innerText = isSignedIn;
+      return isSignedIn
+    }
+
+    // get the current users info
+    function showCurrentUserInfo() {
+      var googleUser = auth2.currentUser.get()
+      document.querySelector('#name').innerText = JSON.stringify(googleUser)
+    }
+
+    function signOut() {
+      auth2.signOut().then(function() {
+        console.log('user signed out')
+        document.querySelector('#name').innerText = 'user signed out'
+      })
+    }
+  
+    
+  </script> -->
