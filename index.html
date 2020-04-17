@@ -34,6 +34,7 @@
         console.log('click handler')
         auth2.attachClickHandler(document.getElementById('button2'), {}, function(googleUser) {
           console.log('click handler callback')
+        window.location.href = "https://kiyain12.github.io/home.html"
           document.querySelector('#name').innerText = JSON.stringify(googleUser)
         })
 
@@ -57,7 +58,7 @@
           height: 50,
           onSuccess: function(googleUser) {
             console.log('signin2 success')
-            window.location.href = "https://kiyain12.github.io/home.html"
+             window.location.href = "https://kiyain12.github.io/home.html"
             document.querySelector('#name').innerText = JSON.stringify(googleUser);
           }
         }
@@ -71,6 +72,7 @@
       // using global variable
       auth2.signIn().then(function(result) {
         console.log('sign in successful')
+        window.location.href = "https://kiyain12.github.io/home.html"
         document.querySelector('#name').innerText = JSON.stringify(result)
       }, function(err) {
         console.log('this is an error')
