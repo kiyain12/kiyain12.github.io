@@ -1,0 +1,58 @@
+body{
+	background-color: rgb(36, 41, 46) !important;
+}
+
+title{
+    color:white !important;
+}
+
+header, nav {
+    background-color: black !important;
+}
+
+table{
+	color:white !important;
+	border: white;
+}
+
+
+td, th, tr, thead {
+    border: 1px solid white !important;
+    padding: 0rem;
+    
+}
+
+nav a{
+    color: white !important;
+    text-decoration: none;
+
+}
+
+section {
+    color: white;
+}
+
+h1, h2, h3, h4, h5, h6{
+	color: #fff;
+}
+
+p, span, small{
+	color: #eaeaea;
+}
+
+
+
+#box{
+	width: 400px;
+	margin: 0 auto;
+	margin-top: 100px;
+	border: 2px solid rgb(24, 26, 31);
+	border-radius: 5px;
+	text-align: center;
+	padding: 20px;
+	background-color: rgb(49, 54, 63) !important;
+}
+
+#dark{
+	visibility:hidden;
+}

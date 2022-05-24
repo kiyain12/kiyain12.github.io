@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-kerning: 30px;
+    
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+}
+
+h1{
+    font-family: 'Roboto', sans-serif;
+}
+/* header{
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 1) !important;
+    position: sticky !important;
+    top: 0px;
+    
+
+} */
+
+nav {
+    min-height: 10vh;
+    margin: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 1) !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav h1, nav ul, nav a {
+    font-size: 1.5rem;
+    flex: 5;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  
+}
+
+
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+/* section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+} */
+
+/* code below is to fix the image and table being too close to the nav bar */
+
+
+#homepage{
+    /* margin: 150px; */
+
+    /* padding-top: 10px; */
+}
+
+section h2{
+    font-size: 5rem;
+    
+}
+
+#light, #dark {
+	cursor: pointer;
+    padding-top: 5px;
+}
+/* code below makes the 3 picture in homepage in 3 columns */
+/* .showcase{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}    */
+
+/* img{
+    width:30vw;
+    height:80vh;
+    object-fit: cover;
+    margin: 20px;
+}*/
+
+
+
+#firstimage {
+    width:100%;
+    height:auto; 
+    object-fit: cover;
+
+} 
+
+/* .imgdiv{
+    height: 310px;
+    overflow: hidden;
+} */
+
+#table-div{
+    float: left;
+    
+}
+
+/* .row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.row .column{
+    flex: 33.3%;
+    width: auto;
+    overflow: hidden;
+    padding: 0 4px;
+    height: 100%;
+}
+
+.row .column img{
+    margin-top: 2%;
+    width: 100%;
+    height: 100%;
+} */
+
+.gap120{
+    padding: 120px 0px;
+}
+
+.gap70{
+    padding: 70px 0px;
+}
+
+.gap150{
+    padding: 150px 0px;
+}
+
+
+table {
+    border-collapse: collapse;
+    /* width: auto; */
+    /* border: black; */
+    /* text-align: center; */
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+/* table.table {
+    width: auto;
+} */
+
+
+
+
+td {
+    text-align: left;
+}
+
+th {
+    text-align: center !important;
+}
+
+
+.main-topic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-text{
+	vertical-align:middle;
+    width: 600px;
+}
+
+.sticky{
+    position: -webkit-sticky;
+    position:sticky;
+    top: 0;
+}
+
+@media only screen and (max-width: 800px){
+   .row .column{
+        flex: 50%;
+        padding: 0 20px  !important;
+    }
+
+
+/* 
+    .table {
+        flex: 50%;
+    }
+
+    #firstimage{
+        flex: 100%;
+     } */
+
+    
+}
+
+@media only screen and (max-width: 600px){
+    .row .column{
+         flex: 100%;
+         padding: 0 20px !important;
+     }
+
+
+     /* .table {
+         flex: 100%;
+     }
+
+     #firstimage{
+        flex: 100%;
+     } */
+ }
+
+ 

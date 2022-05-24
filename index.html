@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>Milk Tea Co.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link id="mystylesheet" rel="stylesheet" type="text/css" href="light.css">
+
+	<link rel = "stylesheet" href = "./style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+    
+    
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script> 
+    
+
+</head>
+
+<body>
+
+		<!-- <header>
+            <nav>
+                <a title = "Home" href="index.html#homepage"><h1>Milk Tea Co.</h1></a>
+                <ul>
+					
+                    <li><a title = "Home"  href = "index.html#homepage"> Home </a></li>
+                    <li><a title = "What is Boba" href = "index.html#milkteainfo"> Boba </a></li>
+                    <li><a title = "Menu" href = "menu.html"> Menu </a></li>
+                    <li><a title = "About" href = "index.html#contact"> About </a></li> -->
+
+                   <!-- <li> <button class="btn btn-light" onclick="swapStyle('light.css')" > Light Mode </button> </li>
+                   <li> <button class="btn btn-dark" onclick="swapStyle('dark.css')"> Dark Mode </button> </li>      -->
+                   
+				   <!-- <div>
+						<span id = "light" title = "Light Mode Toggle" class="material-icons"  onclick="swapStyle('light.css')" style = > light_mode</span>  
+						<span id = "dark"  title = "Dark Mode Toggle" class="material-icons"  onclick="swapStyle('dark.css')" style = > nights_stay</span>  
+				   </div>
+
+                 </ul>,
+            </nav>
+        </header>  -->
+
+        
+         <nav class="navbar navbar-light navbar-expand-lg  sticky-top">
+
+            <a class="navbar-brand" href="index.html"> 
+                <b>
+                Milk Tea Co.
+                </b>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-reorder"></span>
+
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+              <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item ">
+                  <a class="nav-link" href="index.html#homepage">Home</a>
+                </li>
+
+                <li class="nav-item ">
+                  <a class="nav-link" href="index.html#milkteainfo">Boba</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="newmenu.html">Menu</a>
+                  </li>
+
+                  <li class="nav-item ">
+                    <a class="nav-link" href="index.html#contact">About</a>
+                  </li>
+
+                    <li class="nav-item ">
+						<a class="nav-link">
+                        
+                        <span id = "light" title = "Light Mode Toggle" class="material-icons"  onclick="swapStyle('light.css')" style = > light_mode</span> 
+                        
+                        </a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link">
+						<span id = "dark"  title = "Dark Mode Toggle" class="material-icons"  onclick="swapStyle('dark.css')" style = > nights_stay</span>  
+                    </a>    
+                    </li>
+
+              </ul>
+            </div>
+          </nav> 
+        
+       
+
+
+
+		<main>
+
+            <section class="gap150" id = "homepage">
+
+            <div class="container-fluid"> 
+                <!-- container-fluid added on the div class above -->
+                <div class="row gap120">   
+
+                    <!-- <div class="col-7 col-lg-8"> -->
+                    <div class="imgdiv col-md-6">
+                        <!-- removed -sm on the div above  -->
+                        <img id= "firstimage" class = "img-fluid" src="./pexels-rodnae-productions-6412830.jpg" style="" alt>
+                        <!-- <img class = "img-fluid float-right" id = "firstimage" src="./new-home-image.jpg" style="" alt> -->
+                    </div>   
+
+                <div id = "table-div" class="gap70 col-md-6 table-responsive-">
+                <!-- <table class="table border border-black table-sm "> -->
+                    <table class="table table-bordered table-sm">
+                    <thead>
+                        <tr> 
+                            <th scope="col" colspan="2" > Milk Tea Co. </th>
+                           
+                        </tr>
+
+                        <tr>
+                            <th scope="col" colspan="2"> Operating Hours </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                                <td>Monday </td>
+                                <td>10:00AM - 9:00PM</td>
+                        </tr>
+
+                        <tr>
+                                <td>Tuesday</td>
+                                <td>10:00AM - 9:00PM</td>
+                        </tr>
+
+                        <tr>
+                                <td>Wednesday</td>
+                                <td>10:00AM - 9:00PM</td>
+                        </tr>
+
+                        <tr>
+                                <td>Thursday</td>
+                                <td>10:00AM - 9:00PM</td>
+                        </tr>
+
+                        <tr>
+                                <td>Friday</td>
+                                <td>10:00AM - 9:00PM</td>
+                        </tr>
+
+                        <tr>
+                                <td>Saturday</td>
+                                <td>11:30AM - 8:00PM</td>
+                        </tr>
+
+                        <tr>
+                                <td>Sunday</td>
+                                <td>11:00AM - 8:00PM</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                    </div>   
+                </div>
+            </div>
+            </section>
+
+
+            <!-- <section>
+                    <div class = "showcase">
+                        <h2></h2>
+                        <img  class="" src="./pexels-rodnae-productions-6412828.jpg" style="" alt>
+                        <img  class="" src="./pexels-rodnae-productions-6412830.jpg" style="" alt>
+                        <img  class="" src="./pexels-rodnae-productions-6413654.jpg" style="" alt>
+                        <div class="info">
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                    </div>
+            </section>
+
+            <section id = "milkteainfo" class = "milktea">
+                <h2> What is Boba? </h2>
+            </section> -->
+
+
+
+
+
+
+            <section class="gap150">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm">
+                            <img  class="img-fluid" src="./pexels-rodnae-productions-6412828.jpg" style="" alt>
+                        </div>
+                            
+                        <div class="col-sm">
+                            <img  class="img-fluid" src="./pexels-rodnae-productions-6412839.jpg" style="" alt>
+                        </div>
+
+                        <div class="col-sm">
+                            <img  class="img-fluid" src="./pexels-rodnae-productions-6413654.jpg" style="" alt>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="gap150" id="milkteainfo">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <h2  style="text-align: center; font-family: 'Roboto', sans-serif;"> What is Boba?</h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gap150">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <img  class="img-fluid" src="./pexels-saher-suthriwala-6750983.jpg" style="" alt>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h1>What is Boba?</h1>
+                            <p style = "margin-top: 10px;" >
+                                "Boba," also known as "Pearl Milk Tea," "Bubble Tea," "Tapioca Tea," "zhenzhu naicha (珍珠奶茶),"and "sago" among its multilingual nicknames, 
+                                is a beverage consisting of the following five core ingredients: tea (with or without milk, and/or a non-dairy milk substitute), ice, sweetener, 
+                                a topping (often tapioca pearls), and flavoring (natural ingredients, syrups, or powders).
+    
+                                Boba, a milk tea beverage which originated in Taiwan in the 1980s, made its U.S. debut in the late 1990s when Taiwanese American 
+                                entrepreneurs aimed to emulate Taiwan's unique boba shop experience in their American hometowns. Over the past 20 years, boba within 
+                                the United States has morphed into a distinctly Asian American cultural phenomenon. </p>
+    
+                            <p style = "margin-top: 15px;"> 
+                                <b>Work Cited: Trazo, Talitha Angelica. (2020). "Wanna Get Boba?": The Bond Between Boba and Asian American Youth in San Jose, California. </b>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="gap150">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <h2 id="contact" style="text-align: center; font-family: 'Roboto', sans-serif;">About Us</h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="gap150">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <img  class="img-fluid" src="./pexels-rodnae-productions-6412836.jpg" style="" alt>
+                        </div>
+
+                        <div class="col-md-6 gap150">
+                            <h1>About Us</h1>
+                            <p>
+                                Hi, we are a small little shop located in Oswego that sells high quality boba milk tea. 
+                                This is a website that was built so that a customer like you will know our menu, hours of operation, and address.
+                            </p>
+    
+                            <p style = "margin-top: 10px;">
+                                Location : 7060 NY-104, Oswego, NY 13126 
+                                <br>
+                                Phone# : (315)-359-1925
+                            </p>
+    
+                            <p style = "margin-top: 10px;">
+                                Disclaimer: All of the photos used from this website came from Pexels. A website that offers high quality license free images. The images used came from
+                                RODNAE Productions. 
+                                Their profile in Pexel is located at https://www.pexels.com/@rodnae-prod
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+            <!-- <section >
+                <div class = "main-topic">
+                    <div>
+                        <img  class="" src="./pexels-saher-suthriwala-6750983.jpg" style="" alt>
+                    </div>
+
+                    <div class = "left-text">
+                        <h1>What is Boba?</h1>
+
+
+                        <p style = "margin-top: 10px;" >
+                            "Boba," also known as "Pearl Milk Tea," "Bubble Tea," "Tapioca Tea," "zhenzhu naicha (珍珠奶茶),"and "sago" among its multilingual nicknames, 
+                            is a beverage consisting of the following five core ingredients: tea (with or without milk, and/or a non-dairy milk substitute), ice, sweetener, 
+                            a topping (often tapioca pearls), and flavoring (natural ingredients, syrups, or powders).
+
+                            Boba, a milk tea beverage which originated in Taiwan in the 1980s, made its U.S. debut in the late 1990s when Taiwanese American 
+                            entrepreneurs aimed to emulate Taiwan's unique boba shop experience in their American hometowns. Over the past 20 years, boba within 
+                            the United States has morphed into a distinctly Asian American cultural phenomenon.
+
+                        <p style = "margin-top: 15px;"> 
+                            <b>Work Cited: Trazo, Talitha Angelica. (2020). "Wanna Get Boba?": The Bond Between Boba and Asian American Youth in San Jose, California. </b>
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id = "contact">
+                <h2> About </h2>
+            </section>
+
+            <section >
+                <div class = "main-topic">
+                    <div>
+                        <img  class="" src="./pexels-rodnae-productions-6412836.jpg" style="" alt>
+                    </div>
+
+                    <div class = "left-text">
+                        <h1>About Us</h1>
+                        <p>
+                            Hi, we are a small little shop located in Oswego that sells high quality boba milk tea. 
+                            This is a website that was built so that a customer like you will know our menu, hours of operation, and address.
+                        </p>
+
+                        <p style = "margin-top: 10px;">
+                            Location : 7060 NY-104, Oswego, NY 13126 
+                            <br>
+                            Phone# : (315)-359-1925
+                        </p>
+
+                        <p style = "margin-top: 10px;">
+                            Disclaimer: All of the photos used from this website came from Pexels. A website that offers high quality license free images. The images used came from
+                            RODNAE Productions. 
+                            Their profile in Pexel is located at https://www.pexels.com/@rodnae-prod
+                        </p>
+
+                    </div>
+                </div>
+            </section> -->
+
+        </main> 
+
+</body>
+</html>
